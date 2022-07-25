@@ -1,0 +1,38 @@
+# CONFIG FILE FOR AN EXPERIMENT
+data_dir: '/data/GP_FBANK_ALL_39/'
+# speech_metadata: '/semantic_processing/metadata/gp_words_metadata_train_valid_ft_29k.tsv'
+speech_metadata: '/semantic_processing/metadata/gp_words_metadata_new_splits_29k.tsv'
+model_save_dir: '/semantic_processing/inprogress_models/'
+seed: 842 #1248 #8421 #1234 #1358
+language_set: 'POL'
+dev_split: 'DEV'
+experiment_name: 'AWEs_1cnn_3rnn_512d_mr03_siamese'
+#
+input_signal_params:
+    acoustic_features: 'FBANK'
+    max_num_frames: 120
+    sampling_rate: 16000
+#
+acoustic_encoder:
+    encoder_arch: 'GRU'
+    spectral_dim: 39
+    max_num_frames: 120
+    hidden_state_dim: 512
+    output_dim: 512
+    n_layers: 3
+    unit_dropout_prob: 0.1
+    frame_dropout: False # either frame_dropout or feature_dropout can be True
+    feature_dropout: False
+    signal_dropout_prob: 0.0
+#
+negative_strategy: 'hard'
+training_hyperparams:
+    margin: 0.3
+    learning_rate: 0.001
+    batch_size: 256
+    num_epochs: 100
+    early_stopping_criteria: 10
+cuda: True
+catch_keyboard_interrupt: True
+reload_from_files: False
+expand_filepaths_to_save_dir: True
