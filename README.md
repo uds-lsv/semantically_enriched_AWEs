@@ -40,7 +40,7 @@ The code is fairly documented and the vectorization logic, as well as the code f
 If you use our code in a work that leads to a publication, please cite our paper as 
 
 ```
-@inproceedings{Abdullah2021DoAW,
+@inproceedings{Abdullah2022IntegratingFnM,
   title={Integrating Form and Meaning: A Multi-Task Learning Model for Acoustic Word Embeddings},
   author={Badr M. Abdullah and and Bernd Möbius and Dietrich Klakow},
   booktitle={Proc. Interspeech},
