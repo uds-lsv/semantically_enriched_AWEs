@@ -33,7 +33,6 @@ Then ...
 >>> cd AWEs_phon_sim
 >>> python nn_train_sem_pge_embeddings.py config_files/config_file_train_awe_gru_sem_pge.yml
 ```
-```
 
 The code is fairly documented and the vectorization logic, as well as the code for the models, should be useful for other speech technology tasks. If you use our code and encounter problems, please create an issue or contact the first author. 
 
